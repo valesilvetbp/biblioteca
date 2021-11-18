@@ -53,7 +53,7 @@ const Post = ({ state, actions, libraries }) => {
         <Title dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
 
         {/* Hide author and date on pages */}
-        {!data.isPage && (
+        {/* {!data.isPage && (
           <div>
             {author && (
               <StyledLink link={author.link}>
@@ -67,7 +67,7 @@ const Post = ({ state, actions, libraries }) => {
               on <b>{date.toDateString()}</b>
             </DateWrapper>
           </div>
-        )}
+        )} */}
       </div>
 
       {/* Look at the settings to see if we should include the featured image */}
@@ -85,6 +85,12 @@ const Post = ({ state, actions, libraries }) => {
         // libraries.html2react.processors array.
         <Content>
           <Html2React html={post.content.rendered} />
+          <Details>
+            <Html2React html={post.acf.acf_cenni_storici} />
+          </Details>
+          <Details>
+            <Html2React html={post.acf.acf_notes} />
+          </Details>
         </Content>
       )}
     </Container>
@@ -92,6 +98,10 @@ const Post = ({ state, actions, libraries }) => {
 };
 
 export default connect(Post);
+
+const Details = styled.div`
+  padding: 24px 0;
+`;
 
 const Container = styled.div`
   width: 800px;
