@@ -2,6 +2,8 @@ import { connect, styled, decode } from "frontity";
 import Item from "./list-item";
 import Pagination from "./pagination";
 
+import Search from "../search";
+
 const List = ({ state }) => {
   // Get the data of the current list.
   const data = state.source.get(state.router.link);
@@ -22,6 +24,8 @@ const List = ({ state }) => {
           Author: <b>{decode(state.source.author[data.id].name)}</b>
         </Header>
       )}
+
+      <Search />
 
       {/* Iterate over the items of the list. */}
       {data.items.map(({ type, id }) => {
