@@ -13,11 +13,9 @@ const settings = {
       state: {
         theme: {
           menu: [
-            ["Home", "/"],
             ["RSND Vol.1", "/category/vol1/"],
             ["RSND Vol.2", "/category/vol2/"],
             ["Sutra del Loto", "/category/sdl/"],
-            ["About Us", "/about-us/"],
           ],
           featured: {
             showOnList: true,

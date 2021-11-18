@@ -1,4 +1,5 @@
 import { connect, styled } from "frontity";
+import Colors from "../colors";
 import Link from "./link";
 
 /**
@@ -28,6 +29,8 @@ export default connect(Nav);
 const NavContainer = styled.nav`
   list-style: none;
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
   width: 848px;
   max-width: 100%;
   box-sizing: border-box;
@@ -43,7 +46,7 @@ const NavContainer = styled.nav`
 const NavItem = styled.div`
   padding: 0;
   margin: 0 16px;
-  color: #fff;
+  color: ${Colors.primary};
   font-size: 0.9em;
   box-sizing: border-box;
   flex-shrink: 0;
@@ -55,7 +58,7 @@ const NavItem = styled.div`
     border-bottom-color: transparent;
     /* Use for semantic approach to style the current link */
     &[aria-current="page"] {
-      border-bottom-color: #fff;
+      border-bottom-color: ${Colors.primary};
     }
   }
 

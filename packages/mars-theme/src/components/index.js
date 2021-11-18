@@ -6,6 +6,7 @@ import Post from "./post";
 import Loading from "./loading";
 import Title from "./title";
 import PageError from "./page-error";
+import Colors from "../colors";
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -70,7 +71,7 @@ const HeadContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #1f38c5;
+  background-color: ${Colors.bgLight};
 `;
 
 const Main = styled.div`
